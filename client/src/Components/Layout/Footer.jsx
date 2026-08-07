@@ -78,7 +78,7 @@ export default function Footer() {
               </a>
             </span> */}
             <span className="flex items-center gap-1">
-              Built with <span>🚀</span> by{" "}
+              Built with <span>⚡</span> by{" "}
               <a
                 href="https://www.instagram.com/abbas.athar11/"
                 target="_blank"
