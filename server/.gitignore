@@ -1,0 +1,13 @@
+# Server .gitignore
+
+node_modules/
+.env
+.env.*
+logs/
+*.log
+dist/
+build/
+.nyc_output/
+coverage/
+.pm2/
+.DS_Store
