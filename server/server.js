@@ -1,4 +1,4 @@
-// server.js
+// server.js - Updated CORS Configuration
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -10,16 +10,19 @@ import contactRoutes from './routes/Contact.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 // Security Middleware
 app.use(helmet());
 
-// CORS Configuration - Read from env
-const allowedOrigins = [
-  process.env.CLIENT_URL,
-].filter(Boolean);
+// ✅ FIXED: Split CLIENT_URL by commas and trim spaces
+const clientUrls = process.env.CLIENT_URL 
+  ? process.env.CLIENT_URL.split(',').map(url => url.trim())
+  : ['http://localhost:5173', 'http://localhost:3000'];
 
+console.log('✅ Allowed CORS origins:', clientUrls);
+
+// CORS Configuration
 app.use(cors({
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl)
@@ -28,7 +31,7 @@ app.use(cors({
     }
     
     // Allow if origin is in allowed list
-    if (allowedOrigins.includes(origin)) {
+    if (clientUrls.includes(origin)) {
       return callback(null, true);
     }
     
@@ -37,7 +40,7 @@ app.use(cors({
       return callback(null, true);
     }
     
-    console.log('Blocked origin:', origin);
+    console.log('❌ Blocked origin:', origin);
     callback(new Error('Not allowed by CORS'));
   },
   credentials: true,
@@ -121,7 +124,7 @@ app.use((err, req, res, next) => {
 // Start server
 const server = app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🔗 ${process.env.SERVER_URL}`);
+  console.log(`🔗 ${process.env.SERVER_URL || `http://localhost:${PORT}`}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
 
