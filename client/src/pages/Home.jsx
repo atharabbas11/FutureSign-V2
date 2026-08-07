@@ -26,16 +26,16 @@ const Counter = ({ to, suffix = '' }) => {
 // Premium Logo Carousel Component
 const SmoothLogoCarousel = () => {
   const logos = [
-    { id: 1, name: "Acc", image: "/public/images/logos/acc.png" },
-    { id: 2, name: "Afstar", image: "/public/images/logos/afstar.png" },
-    { id: 3, name: "Ambuja", image: "/public/images/logos/ambuja.png" },
-    { id: 4, name: "Hangyo", image: "/public/images/logos/hangyo.jpg" },
-    { id: 5, name: "Maha", image: "/public/images/logos/maha.png" },
-    { id: 6, name: "Mslife", image: "/public/images/logos/mslife.png" },
-    { id: 7, name: "Ramco", image: "/public/images/logos/ramco.jpg" },
-    { id: 8, name: "Sudhakar", image: "/public/images/logos/sudhakar.png" },
-    { id: 9, name: "Supreme", image: "/public/images/logos/supreme.png" },
-    { id: 10, name: "Ultratech", image: "/public/images/logos/ultratech.png" },
+    { id: 1, name: "Acc", image: "/images/logos/acc.png" },
+    { id: 2, name: "Afstar", image: "/images/logos/afstar.png" },
+    { id: 3, name: "Ambuja", image: "/images/logos/ambuja.png" },
+    { id: 4, name: "Hangyo", image: "/images/logos/hangyo.jpg" },
+    { id: 5, name: "Maha", image: "/images/logos/maha.png" },
+    { id: 6, name: "Mslife", image: "/images/logos/mslife.png" },
+    { id: 7, name: "Ramco", image: "/images/logos/ramco.jpg" },
+    { id: 8, name: "Sudhakar", image: "/images/logos/sudhakar.png" },
+    { id: 9, name: "Supreme", image: "/images/logos/supreme.png" },
+    { id: 10, name: "Ultratech", image: "/images/logos/ultratech.png" },
   ];
 
   return (
