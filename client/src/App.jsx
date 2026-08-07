@@ -2,16 +2,16 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Layout/Navbar';
-import Footer from './components/Layout/Footer';
-import ScrollToTop from './components/UI/ScrollToTop';
+import Navbar from './Components/Layout/Navbar';
+import Footer from './Components/Layout/Footer';
+import ScrollToTop from './Components/UI/ScrollToTop';
 
 // Import Skeletons
-import HomeSkeleton from './components/Skeleton/HomeSkeleton';
-import AboutSkeleton from './components/Skeleton/AboutSkeleton';
-import ServicesSkeleton from './components/Skeleton/ServicesSkeleton';
-import GallerySkeleton from './components/Skeleton/GallerySkeleton';
-import ContactSkeleton from './components/Skeleton/ContactSkeleton';
+import HomeSkeleton from './Components/Skeleton/HomeSkeleton';
+import AboutSkeleton from './Components/Skeleton/AboutSkeleton';
+import ServicesSkeleton from './Components/Skeleton/ServicesSkeleton';
+import GallerySkeleton from './Components/Skeleton/GallerySkeleton';
+import ContactSkeleton from './Components/Skeleton/ContactSkeleton';
 
 // Lazy load actual pages
 const Home = lazy(() => import('./pages/Home'));
