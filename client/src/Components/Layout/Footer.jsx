@@ -66,11 +66,22 @@ export default function Footer() {
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
             <span className="text-gray-600">|</span>
-            <span className="flex items-center gap-1">
+            {/* <span className="flex items-center gap-1">
               Made with <span className="text-red-500">❤️</span> by 
               <a 
                 href="https://www.instagram.com/abbas.athar11/" 
                 target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#dd5428] hover:text-white transition-colors font-medium"
+              >
+                @abbas.athar11
+              </a>
+            </span> */}
+            <span className="flex items-center gap-1">
+              Built with <span>🚀</span> by{" "}
+              <a
+                href="https://www.instagram.com/abbas.athar11/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#dd5428] hover:text-white transition-colors font-medium"
               >
